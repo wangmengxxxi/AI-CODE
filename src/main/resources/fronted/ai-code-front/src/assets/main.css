@@ -1,0 +1,16 @@
+@import './base.css';
+
+#app {
+  width: 100%;
+  height: 100%;
+  font-weight: normal;
+}
+
+/* 移除所有布局限制,让各页面组件自己控制布局 */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
