@@ -22,3 +22,24 @@ knife4j:
 mybatis-flex:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+# 定义chat模型
+langchain4j:
+  open-ai:
+    chat-model:
+      api-key: ${API-KEY}
+      base-url: https://dashscope.aliyuncs.com/compatible-mode/v1
+      model-name: qwen-plus
+      log-requests: true
+      log-responses: true
+      max-tokens: 8192
+      strict-json-schema: true
+      response-format: json_object
+    streaming-chat-model:
+      api-key: ${API-KEY}
+      base-url: https://dashscope.aliyuncs.com/compatible-mode/v1
+      model-name: qwen-plus
+      log-requests: true
+      log-responses: true
+      max-tokens: 8192
+
+

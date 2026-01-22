@@ -1,0 +1,15 @@
+# 任务目标
+请生成一个基于 Vue 3 的组件代码。
+
+# 架构约束
+- 框架: Vue 3 (Composition API, <script setup>)
+- 语言: TypeScript
+- UI 库: Ant Design Vue (AntDV)
+- 样式: Tailwind CSS 或 Scoped CSS
+
+# 生成要求
+1. 必须是一个完整的 .vue 单文件组件代码。
+2. 逻辑必须清晰，状态管理优先使用 ref/reactive。
+3. 如果涉及到图标，请使用 @ant-design/icons-vue。
+4. 确保代码可以直接在 Vite + Vue 3 的环境下运行。
+5. 需要对代码进行一定描述解释

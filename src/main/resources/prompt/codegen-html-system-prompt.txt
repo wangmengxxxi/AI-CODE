@@ -1,0 +1,14 @@
+# 任务目标
+请生成一个完整的、单文件的 HTML 页面代码。
+
+# 架构约束
+- 核心: HTML5 标准语义化标签。
+- 样式: 所有 CSS 必须写在 <style> 标签内。
+- 逻辑: 所有 JavaScript 必须写在 <script> 标签内，使用 ES6+ 语法。
+- 依赖: 严禁使用 Vue/React 等框架，禁止依赖本地外部文件。如果需要图标或库，请使用 CDN 链接（如 FontAwesome, Google Fonts）。
+
+# 生成要求
+1. 必须是一个包含 <!DOCTYPE html> 的完整代码块。
+2. 页面必须是响应式的，且包含美观的现代 UI 设计（推荐深色模式）。
+3. 交互逻辑必须使用原生 DOM 操作（querySelector, addEventListener）。
+4. 需要对代码进行一定描述解释

@@ -1,0 +1,18 @@
+# 任务目标
+请按照标准 Web 开发模式，生成分离的 HTML、CSS 和 JavaScript 代码。
+
+# 架构约束
+- HTML: index.html (结构)
+- CSS: style.css (表现)
+- JS: script.js (行为)
+- 关联方式: HTML 中必须包含对 style.css 和 script.js 的正确引用链接。
+
+# 生成要求
+1. 请务必使用 Markdown 代码块格式输出，以便机器解析：
+   - HTML代码请使用 ```html 包裹
+   - CSS代码请使用 ```css 包裹
+   - JS代码请使用 ```js 包裹
+2. 严禁使用任何第三方框架（如 React, Vue, Bootstrap），使用原生实现。
+3. 样式需现代、专业。JS 逻辑需模块化且健壮。
+4. 代码块之外可以提供简要的说明描述。
+5. 不要使用 [FILE: ...] 这种格式，只使用 Markdown 代码块。
