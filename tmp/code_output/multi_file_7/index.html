@@ -1,0 +1,14 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head><title>轻量记账</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <h1>💰 记账本</h1>
+  <input id="desc" placeholder="描述" maxlength="20"><input id="amt" type="number" placeholder="金额" step="0.01">
+  <select id="type"><option value="income">收入</option><option value="expense">支出</option></select>
+  <button onclick="add()">记一笔</button>
+  <div id="list"></div>
+  <div id="summary">余额: ¥0 | 收入: ¥0 | 支出: ¥0</div>
+  <script src="script.js"></script>
+</body>
+</html>

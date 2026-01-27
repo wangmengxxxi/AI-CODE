@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>我的博客</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --accent-color: #0077ff;
+      --card-bg: #1e1e1e;
+      --border-radius: 12px;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.7;
+      padding: 0;
+      transition: background-color 0.3s ease;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px 60px;
+      background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+      border-bottom: 1px solid #333;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #aaa;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .blog-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .blog-card {
+      background-color: var(--card-bg);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .card-excerpt {
+      color: #aaa;
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    .read-more {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #777;
+      font-size: 0.9rem;
+      border-top: 1px solid #333;
+      margin-top: 60px;
+    }
+
+    .social-links {
+      margin-top: 15px;
+    }
+
+    .social-links a {
+      color: #777;
+      font-size: 1.3rem;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: var(--accent-color);
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>张明的博客</h1>
+    <p>记录技术、思考与生活点滴</p>
+    <nav>
+      <a href="#home"><i class="fas fa-home"></i> 首页</a>
+      <a href="#about"><i class="fas fa-user"></i> 关于我</a>
+      <a href="#posts"><i class="fas fa-pen"></i> 文章</a>
+      <a href="#contact"><i class="fas fa-envelope"></i> 联系</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="blog-list" id="blogList">
+      <!-- 博客文章将通过 JavaScript 动态插入 -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 张明的博客. 版权所有.</p>
+    <div class="social-links">
+      <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    // 模拟博客文章数据
+    const blogPosts = [
+      {
+        id: 1,
+        title: '如何开始学习前端开发',
+        excerpt: '前端开发是进入编程世界的一个良好起点。本文介绍学习路径和推荐资源。',
+        image: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        date: '2024-04-01',
+        readTime: '5 分钟'
+      },
+      {
+        id: 2,
+        title: 'JavaScript 中的闭包详解',
+        excerpt: '闭包是 JavaScript 的核心概念之一。本文通过实例讲解其原理与应用。',
+        image: 'https://images.unsplash.com/photo-1498050108023-c52b22abf4eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        date: '2024-03-25',
+        readTime: '8 分钟'
+      },
+      {
+        id: 3,
+        title: '构建你的第一个 React 应用',
+        excerpt: 'React 是现代前端开发的重要工具。本文带你从零开始搭建一个简单应用。',
+        image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        date: '2024-03-18',
+        readTime: '10 分钟'
+      }
+    ];
+
+    // 动态渲染博客文章
+    const blogListEl = document.getElementById('blogList');
+
+    function renderBlogPosts() {
+      blogListEl.innerHTML = '';
+
+      blogPosts.forEach(post => {
+        const card = document.createElement('div');
+        card.className = 'blog-card';
+        card.innerHTML = `
+          <img class="card-image" src="${post.image}" alt="${post.title}" />
+          <div class="card-content">
+            <h3 class="card-title">${post.title}</h3>
+            <p class="card-excerpt">${post.excerpt}</p>
+            <div class="card-footer">
+              <span>${post.date}</span>
+              <span>${post.readTime}</span>
+            </div>
+            <p><a href="/post/${post.id}" class="read-more">继续阅读 →</a></p>
+          </div>
+        `;
+        blogListEl.appendChild(card);
+      });
+    }
+
+    // 页面加载完成后渲染文章
+    document.addEventListener('DOMContentLoaded', () => {
+      renderBlogPosts();
+    });
+  </script>
+</body>
+</html>

@@ -25,7 +25,7 @@ public class Codegen {
         generator.generate();
     }
 
-    private static final String[] TABLE_NAMES = {"user"};
+    private static final String[] TABLE_NAMES = {"app"};
 
     public static GlobalConfig createGlobalConfigUseStyle2() {
         //创建配置内容

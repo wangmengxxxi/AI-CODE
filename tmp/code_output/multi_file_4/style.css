@@ -1,0 +1,5 @@
+body{font:16px sans-serif;margin:20px;max-width:600px;margin:auto}
+input,select,button{margin:5px;padding:6px;font:inherit}
+#list{margin:15px 0;max-height:300px;overflow-y:auto}
+#list div{padding:4px 0;border-bottom:1px #eee solid}
+#total{font-weight:bold;margin-top:15px;color:#28a745}

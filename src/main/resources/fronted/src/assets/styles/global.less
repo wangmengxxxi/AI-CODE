@@ -1,0 +1,67 @@
+@import './variables.less';
+
+// 全局样式重置
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: @font-family;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+}
+
+// 链接样式
+a {
+    color: @primary-color;
+    text-decoration: none;
+
+    &:hover {
+        color: lighten(@primary-color, 10%);
+    }
+}
+
+// 滚动条样式
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+
+    &:hover {
+        background: #a8a8a8;
+    }
+}
+
+// Hero 渐变背景
+.hero-gradient {
+    background: @gradient-bg;
+}
+
+// 卡片悬停效果
+.card-hover {
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: @box-shadow-hover;
+    }
+}
