@@ -1,0 +1,371 @@
+/* Base & Reset */
+:root {
+  --umkc-blue: #002D72;
+  --umkc-gold: #FFCC00;
+  --umkc-light: #F8F9FA;
+  --umkc-gray: #495057;
+  --umkc-dark: #212529;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: var(--umkc-dark);
+  background-color: #fff;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--umkc-blue);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  transition: top 0.3s;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Layout */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header */
+.site-header {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.umkc-logo {
+  height: 36px;
+  width: auto;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--umkc-blue);
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: var(--transition);
+}
+
+.main-nav a:hover {
+  color: var(--umkc-gold);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--umkc-blue), #004a9e);
+  color: white;
+  padding: 6rem 1rem 4rem;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.tagline {
+  font-size: 1.4rem;
+  opacity: 0.95;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+}
+
+.cta-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.85rem 2.2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+  font-size: 1.05rem;
+}
+
+.btn-primary {
+  background-color: var(--umkc-gold);
+  color: var(--umkc-blue);
+}
+
+.btn-primary:hover {
+  background-color: #e6b800;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Sections */
+.section-academics,
+.section-campus,
+.section-admissions,
+.section-student-life {
+  padding: 5rem 0;
+}
+
+.section-academics { background-color: #f8f9fa; }
+.section-campus { background-color: white; }
+.section-admissions { background-color: #f0f4f8; }
+.section-student-life { background-color: #f8f9fa; }
+
+.section-container h2 {
+  font-size: 2.5rem;
+  color: var(--umkc-blue);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.section-intro {
+  font-size: 1.25rem;
+  color: var(--umkc-gray);
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+
+/* Cards Grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.75rem;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: var(--transition);
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  color: var(--umkc-blue);
+  margin-bottom: 0.75rem;
+  font-size: 1.4rem;
+}
+
+/* Campus Map */
+.campus-map {
+  position: relative;
+  height: 400px;
+  background: linear-gradient(to bottom, #eef2f7, #d9e2ec);
+  border-radius: 8px;
+  margin: 2.5rem auto;
+  max-width: 800px;
+  overflow: hidden;
+}
+
+.map-landmark {
+  position: absolute;
+  background: var(--umkc-gold);
+  color: var(--umkc-blue);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Stats */
+.admissions-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--umkc-blue);
+  line-height: 1;
+}
+
+.stat-item p {
+  margin-top: 0.5rem;
+  color: var(--umkc-gray);
+  font-size: 1.05rem;
+}
+
+/* Testimonials */
+.student-testimonials {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.student-testimonials blockquote {
+  background: white;
+  padding: 1.75rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  position: relative;
+  border-left: 4px solid var(--umkc-gold);
+}
+
+.student-testimonials cite {
+  display: block;
+  margin-top: 0.75rem;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--umkc-blue);
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--umkc-blue);
+  color: white;
+  padding: 2.5rem 0 1.5rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.footer-logo {
+  margin-bottom: 1.5rem;
+}
+
+.footer-logo .umkc-logo {
+  height: 40px;
+}
+
+.site-footer p {
+  margin: 0.75rem 0;
+  font-size: 0.95rem;
+}
+
+.site-footer a {
+  color: var(--umkc-gold);
+  text-decoration: underline;
+}
+
+.site-footer a:hover {
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .tagline {
+    font-size: 1.15rem;
+  }
+
+  .cta-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 4rem 1rem 2.5rem;
+  }
+
+  .section-container h2 {
+    font-size: 2rem;
+  }
+}

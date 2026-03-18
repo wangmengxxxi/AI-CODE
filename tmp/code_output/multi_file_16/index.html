@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>林溪的笔记 | 个人博客</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1><a href="#home">林溪的笔记</a></h1>
+      <nav>
+        <a href="#home" class="nav-link">首页</a>
+        <a href="#posts" class="nav-link">文章</a>
+        <a href="#about" class="nav-link">关于</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main container">
+    <!-- 路由出口 -->
+    <section id="view-home" class="view active">
+      <h2>欢迎来到我的思考角落</h2>
+      <p>这里记录技术实践、读书笔记与生活观察。文字缓慢，但真诚。</p>
+      <a href="#posts" class="btn">查看所有文章</a>
+    </section>
+
+    <section id="view-posts" class="view">
+      <h2>近期文章</h2>
+      <div id="post-list" class="post-list"></div>
+    </section>
+
+    <section id="view-post-detail" class="view">
+      <article id="post-detail" class="post-content"></article>
+      <a href="#posts" class="btn btn-secondary">← 返回列表</a>
+    </section>
+
+    <section id="view-about" class="view">
+      <h2>关于我</h2>
+      <p>前端开发者 & 终身学习者。相信清晰的表达是思考的终点，也是起点。</p>
+      <p>喜欢写代码、读纸质书、散步时听播客。不追热点，但求真实。</p>
+      <p><strong>邮箱：</strong><code>linxi@example.com</code></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2024 林溪的笔记. 保留所有权利。</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

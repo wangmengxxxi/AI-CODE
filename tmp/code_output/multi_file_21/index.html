@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>我们的时光 · 恋爱记录</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>我们的时光</h1>
+      <p>从心动到日常，每一帧都值得珍藏</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="countdown" class="card">
+      <h2>✨ 纪念日倒计时</h2>
+      <div class="countdown-grid">
+        <div class="countdown-item">
+          <h3>初遇日</h3>
+          <input type="date" id="date-first-meet" class="date-input">
+          <div class="days">— 天</div>
+        </div>
+        <div class="countdown-item">
+          <h3>告白日</h3>
+          <input type="date" id="date-confession" class="date-input">
+          <div class="days">— 天</div>
+        </div>
+        <div class="countdown-item">
+          <h3>纪念日</h3>
+          <input type="date" id="date-anniversary" class="date-input">
+          <div class="days">— 天</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline" class="card">
+      <h2>📖 恋爱大事记</h2>
+      <button id="add-timeline-btn" class="btn btn-primary">+ 添加事件</button>
+      <ul id="timeline-list" class="timeline"></ul>
+    </section>
+
+    <section id="gallery" class="card">
+      <h2>📸 温馨瞬间</h2>
+      <button id="add-photo-btn" class="btn btn-secondary">+ 上传照片</button>
+      <div id="photo-grid" class="photo-grid"></div>
+    </section>
+
+    <section id="letters" class="card">
+      <h2>💌 给彼此的情书</h2>
+      <textarea id="letter-input" placeholder="写下想说的话…（支持换行）" rows="4"></textarea>
+      <button id="save-letter-btn" class="btn btn-primary">✉️ 保存便签</button>
+      <div id="letters-list" class="letters-list"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="current-year"></span> 专属你们的恋爱记忆 · 温暖常在</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

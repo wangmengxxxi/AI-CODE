@@ -1,0 +1,182 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>成都大学 | Chengdu University</title>
+  <meta name="description" content="成都大学官方门户网站——立足成都，面向世界，培养具有家国情怀与创新精神的高素质人才">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 导航栏 -->
+  <header class="site-header">
+    <div class="container">
+      <a href="#" class="logo">
+        <span class="logo-text">成都大学</span>
+        <span class="logo-subtext">Chengdu University</span>
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="#home">首页</a></li>
+          <li><a href="#about">学校概况</a></li>
+          <li><a href="#academics">教育教学</a></li>
+          <li><a href="#campus">校园风光</a></li>
+          <li><a href="#news">新闻动态</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="打开菜单">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 首屏轮播 -->
+  <section id="home" class="hero-slider">
+    <div class="slider-track" id="sliderTrack">
+      <div class="slide active">
+        <div class="slide-bg" style="background-image: url('https://picsum.photos/id/1062/1920/800?grayscale');"></div>
+        <div class="slide-content">
+          <h1>自爱·自修·自尊·自强</h1>
+          <p>扎根中国大地，建设特色鲜明、国内一流的应用型城市大学</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="slide-bg" style="background-image: url('https://picsum.photos/id/1070/1920/800?grayscale');"></div>
+        <div class="slide-content">
+          <h1>锦城之畔 · 芙蓉学府</h1>
+          <p>毗邻龙泉山，坐拥东安湖，生态校园全国典范</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="slide-bg" style="background-image: url('https://picsum.photos/id/1084/1920/800?grayscale');"></div>
+        <div class="slide-content">
+          <h1>产教融合 · 开放协同</h1>
+          <p>服务成都国家中心城市战略，赋能区域高质量发展</p>
+        </div>
+      </div>
+    </div>
+    <button class="slider-btn prev" id="prevBtn" aria-label="上一张">&lt;</button>
+    <button class="slider-btn next" id="nextBtn" aria-label="下一张">&gt;</button>
+    <div class="slider-dots" id="sliderDots"></div>
+  </section>
+
+  <!-- 校训模块 -->
+  <section class="motto-section" id="about">
+    <div class="container">
+      <h2 class="section-title">校训精神</h2>
+      <div class="motto-grid">
+        <div class="motto-card">
+          <div class="motto-icon" aria-label="自爱">自<span class="icon-char">爱</span></div>
+          <h3>自爱</h3>
+          <p>涵养人格，敬畏生命，厚植家国情怀</p>
+        </div>
+        <div class="motto-card">
+          <div class="motto-icon" aria-label="自修">自<span class="icon-char">修</span></div>
+          <h3>自修</h3>
+          <p>勤学善思，笃行致远，锤炼过硬本领</p>
+        </div>
+        <div class="motto-card">
+          <div class="motto-icon" aria-label="自尊">自<span class="icon-char">尊</span></div>
+          <h3>自尊</h3>
+          <p>明德守正，恪守诚信，坚守道德底线</p>
+        </div>
+        <div class="motto-card">
+          <div class="motto-icon" aria-label="自强">自<span class="icon-char">强</span></div>
+          <h3>自强</h3>
+          <p>勇毅担当，敢为人先，勇攀时代高峰</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 校园风光 -->
+  <section class="campus-section" id="campus">
+    <div class="container">
+      <h2 class="section-title">锦绣校园</h2>
+      <div class="campus-gallery">
+        <div class="campus-item">
+          <img src="https://picsum.photos/id/1055/600/400?grayscale" alt="成都大学图书馆" loading="lazy">
+          <p>图书馆：智慧学习空间</p>
+        </div>
+        <div class="campus-item">
+          <img src="https://picsum.photos/id/1069/600/400?grayscale" alt="东苑湖" loading="lazy">
+          <p>东苑湖：学子晨读静思之地</p>
+        </div>
+        <div class="campus-item">
+          <img src="https://picsum.photos/id/1077/600/400?grayscale" alt="银杏大道" loading="lazy">
+          <p>银杏大道：秋日金色长廊</p>
+        </div>
+        <div class="campus-item">
+          <img src="https://picsum.photos/id/1080/600/400?grayscale" alt="学生活动中心" loading="lazy">
+          <p>学生活动中心：青春绽放舞台</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 新闻动态 -->
+  <section class="news-section" id="news">
+    <div class="container">
+      <h2 class="section-title">新闻动态</h2>
+      <div class="news-list">
+        <article class="news-item">
+          <time datetime="2024-05-20">2024-05-20</time>
+          <h3>我校牵头组建“成渝地区双城经济圈高校科技创新联盟”</h3>
+          <p>聚焦人工智能、生物医药、绿色低碳等领域，推动产学研深度融合...</p>
+        </article>
+        <article class="news-item">
+          <time datetime="2024-05-15">2024-05-15</time>
+          <h3>成都大学学子获“挑战杯”全国特等奖</h3>
+          <p>作品《智护银龄——社区居家养老AI陪伴系统》获专家高度评价...</p>
+        </article>
+        <article class="news-item">
+          <time datetime="2024-05-10">2024-05-10</time>
+          <h3>我校与龙泉驿区共建“乡村振兴实践基地”</h3>
+          <p>发挥学科优势，助力成都近郊乡村文化振兴与产业升级...</p>
+        </article>
+      </div>
+      <div class="text-center">
+        <a href="#" class="btn btn-outline">查看更多新闻</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>成都大学</h3>
+          <p>地址：四川省成都市外东十陵镇<br>邮编：610106<br>电话：028-84616XXX</p>
+        </div>
+        <div class="footer-col">
+          <h3>快速链接</h3>
+          <ul>
+            <li><a href="#">教务系统</a></li>
+            <li><a href="#">学生工作部</a></li>
+            <li><a href="#">就业信息网</a></li>
+            <li><a href="#">图书馆门户</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>关注我们</h3>
+          <div class="social-links">
+            <a href="#" aria-label="微信"><span class="icon-wechat">W</span></a>
+            <a href="#" aria-label="微博"><span class="icon-weibo">B</span></a>
+            <a href="#" aria-label="抖音"><span class="icon-douyin">D</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2024 成都大学 版权所有 | <a href="#">蜀ICP备XXXXXX号</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 加载 JS -->
+  <script src="script.js"></script>
+</body>
+</html>

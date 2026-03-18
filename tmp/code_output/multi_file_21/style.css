@@ -1,0 +1,313 @@
+/* 全局重置与基础 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #ff6b6b;
+  --secondary: #4ecdc4;
+  --accent: #ffe66d;
+  --light: #f9f7f3;
+  --dark: #333;
+  --gray: #777;
+  --border: #e0d9d1;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: var(--dark);
+  background: linear-gradient(135deg, #fdf6f0 0%, #f9f7f3 100%);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  color: white;
+  text-align: center;
+  padding: 6rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.hero p {
+  font-size: 1.4rem;
+  opacity: 0.92;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Card */
+.card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  padding: 1.8rem;
+  margin-bottom: 2.5rem;
+}
+
+.card h2 {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #ff5252;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+.btn-secondary {
+  background: var(--secondary);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #3db9b0;
+}
+
+/* Countdown */
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.countdown-item {
+  text-align: center;
+}
+
+.countdown-item h3 {
+  font-size: 1.2rem;
+  color: var(--dark);
+  margin-bottom: 0.75rem;
+}
+
+.date-input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff9f6;
+}
+
+.days {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-top: 0.75rem;
+  min-height: 1.8rem;
+}
+
+/* Timeline */
+.timeline {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+.timeline li {
+  position: relative;
+  padding: 1.2rem 1.5rem 1.2rem 5rem;
+  border-left: 2px solid var(--secondary);
+  margin-bottom: 1.5rem;
+  background: #fffaf7;
+  border-radius: 0 8px 8px 0;
+  transition: transform 0.2s;
+}
+
+.timeline li:hover {
+  transform: translateX(4px);
+  background: #fff8f4;
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -34px;
+  top: 1.2rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 3px solid white;
+  box-shadow: 0 0 0 3px var(--secondary);
+}
+
+.timeline li h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+  color: var(--dark);
+}
+
+.timeline li .date {
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.timeline li .content {
+  font-size: 1rem;
+  color: #555;
+}
+
+.timeline li .actions {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.timeline li .actions button {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+/* Gallery */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.photo-item {
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: all 0.4s ease;
+  background: #f5f0e9;
+}
+
+.photo-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-item .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* Letters */
+#letter-input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.letters-list {
+  margin-top: 1.5rem;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.letter-item {
+  background: #fffaf7;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  border-left: 3px solid var(--secondary);
+}
+
+.letter-item .meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin-bottom: 0.5rem;
+}
+
+.letter-item .content {
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: white;
+  color: var(--gray);
+  margin-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1.1rem;
+  }
+  .container {
+    padding: 1.5rem 1rem;
+  }
+  .card {
+    padding: 1.4rem;
+  }
+  .countdown-grid {
+    grid-template-columns: 1fr;
+  }
+}

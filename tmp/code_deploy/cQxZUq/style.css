@@ -1,0 +1,495 @@
+/* style.css */
+:root {
+  --primary-blue: #1a3a6c;
+  --accent-gold: #b8860b;
+  --accent-green: #2d6b2d;
+  --accent-orange: #b85a00;
+  --light-bg: #f8fafc;
+  --card-bg: #ffffff;
+  --text-dark: #2d3748;
+  --text-light: #718096;
+  --border: #e2e8f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Serif SC", "Microsoft YaHei", serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: #f9fbfd;
+}
+
+/* 基础样式 */
+a {
+  text-decoration: none;
+  color: var(--primary-blue);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-gold);
+}
+
+.section {
+  padding: 5rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.25rem;
+  color: var(--primary-blue);
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--accent-gold);
+  margin: 0.75rem auto;
+  border-radius: 2px;
+}
+
+/* 头部样式 */
+.site-header {
+  background: linear-gradient(135deg, var(--primary-blue), #0d2547);
+  color: white;
+  padding: 1.5rem 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.logo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.school-emblem {
+  width: 80px;
+  height: 80px;
+  background: 
+    radial-gradient(circle at 30% 30%, #ffd700 0%, #ffcc00 100%),
+    radial-gradient(circle at 70% 70%, #1a3a6c 0%, #0d2547 100%);
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.5s ease;
+}
+
+.school-emblem:hover {
+  transform: rotateY(360deg) rotateX(360deg);
+}
+
+.school-emblem::before {
+  content: '资';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 28px;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.school-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.school-slogan {
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0.9;
+  letter-spacing: 1px;
+}
+
+/* 导航栏 */
+.main-nav {
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.main-nav ul {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0.75rem 0;
+}
+
+.main-nav li {
+  margin: 0 1.25rem;
+}
+
+.main-nav a {
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.main-nav a:hover {
+  background: var(--primary-blue);
+  color: white;
+}
+
+/* 首屏大图 */
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(135deg, #1a3a6c 0%, #2d6b2d 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(255,215,0,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(255,215,0,0.08) 0%, transparent 50%);
+}
+
+.hero-content h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-content .highlight {
+  color: #ffd700;
+  font-weight: 800;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+  font-size: 1.4rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  opacity: 0.95;
+}
+
+.cta-button {
+  background: #ffd700;
+  color: var(--primary-blue);
+  border: none;
+  padding: 0.8rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.cta-button:hover {
+  background: #ffcc00;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* 时间轴样式 */
+.timeline {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  flex: 1;
+  min-width: 220px;
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.4s ease;
+  position: relative;
+  border: 2px solid var(--border);
+}
+
+.timeline-item.active {
+  border-color: var(--accent-gold);
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.timeline-item .year {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+}
+
+.timeline-item .content {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+}
+
+/* 校园风貌网格 */
+.campus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.campus-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.campus-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.card-img {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.campus-card h3 {
+  font-size: 1.4rem;
+  padding: 1.25rem 1.5rem 0.75rem;
+  color: var(--primary-blue);
+}
+
+.campus-card p {
+  padding: 0 1.5rem 1.5rem;
+  color: var(--text-light);
+}
+
+/* 文化特色布局 */
+.culture-content {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.culture-text {
+  flex: 1;
+}
+
+.culture-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.culture-text ul {
+  padding-left: 1.5rem;
+}
+
+.culture-text li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.culture-text strong {
+  color: var(--primary-blue);
+}
+
+.culture-visual {
+  flex: 0 0 280px;
+}
+
+.book-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.book {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 校友风采 */
+.alumni-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.alumni-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.alumni-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.alumni-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.alumni-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary-blue);
+}
+
+.alumni-role {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* 联系方式 */
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-info p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.contact-info strong {
+  color: var(--primary-blue);
+}
+
+.qrcode-placeholder {
+  flex: 0 0 220px;
+  text-align: center;
+}
+
+.qrcode-inner {
+  width: 200px;
+  height: 200px;
+  background: #f0f0f0;
+  border-radius: 12px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  border: 1px dashed var(--border);
+}
+
+.qrcode-desc {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* 页脚 */
+.site-footer {
+  background: var(--primary-blue);
+  color: #cbd5e0;
+  text-align: center;
+  padding: 2.5rem 5%;
+}
+
+.site-footer p {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+/* 响应式适配 */
+@media (max-width: 768px) {
+  .logo-container {
+    flex-direction: column;
+  }
+  
+  .school-name {
+    font-size: 1.5rem;
+  }
+  
+  .hero-content h2 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  
+  .main-nav ul {
+    flex-wrap: wrap;
+  }
+  
+  .main-nav li {
+    margin: 0.5rem;
+  }
+  
+  .culture-content {
+    flex-direction: column;
+  }
+  
+  .contact-content {
+    flex-direction: column;
+  }
+  
+  .section {
+    padding: 3rem 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+}

@@ -25,7 +25,7 @@ public class Codegen {
         generator.generate();
     }
 
-    private static final String[] TABLE_NAMES = {"app"};
+    private static final String[] TABLE_NAMES = {"chat_history"};
 
     public static GlobalConfig createGlobalConfigUseStyle2() {
         //创建配置内容

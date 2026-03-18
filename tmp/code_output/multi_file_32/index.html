@@ -1,0 +1,117 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>成都信息工程大学 · 官方网站</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 导航栏 -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <svg width="40" height="40" viewBox="0 0 100 100" class="logo-icon">
+          <circle cx="50" cy="50" r="45" fill="#006699" opacity="0.1"/>
+          <path d="M30 40 L50 20 L70 40 M50 20 L50 70" stroke="#006699" stroke-width="6" fill="none"/>
+          <text x="50" y="90" font-size="12" text-anchor="middle" fill="#2E8B57">CUIT</text>
+        </svg>
+        <h1>成都信息工程大学</h1>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#home">首页</a></li>
+          <li><a href="#academics">学科建设</a></li>
+          <li><a href="#research">科学研究</a></li>
+          <li><a href="#campus">校园风采</a></li>
+          <li><a href="#admission">招生就业</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 主视觉区 -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h2>成于大气 · 信达天下</h2>
+      <p class="subtitle">中国气象人才摇篮｜国家首批“卓越工程师教育培养计划”高校</p>
+      <div class="weather-card">
+        <h3>校园气象站 · 实时数据</h3>
+        <div class="weather-info">
+          <span id="current-time">--:--</span>
+          <span id="current-temp">--°C</span>
+          <span id="current-condition">晴</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 特色板块 -->
+  <section id="academics" class="features">
+    <div class="container">
+      <h2>三大核心特色</h2>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="card-icon" style="background:#006699;">☁️</div>
+          <h3>大气科学</h3>
+          <p>全国A类学科，拥有高原大气与环境教育部重点实验室，服务国家气象现代化战略。</p>
+        </article>
+        <article class="feature-card">
+          <div class="card-icon" style="background:#2E8B57;">💻</div>
+          <h3>信息技术</h3>
+          <p>计算机科学与技术、通信工程入选国家级一流本科专业，聚焦人工智能与气象大数据融合。</p>
+        </article>
+        <article class="feature-card">
+          <div class="card-icon" style="background:#D4AF37;">⚙️</div>
+          <h3>工程实践</h3>
+          <p>国家级工程实践教育中心，无人机气象探测、智能交通系统等产教融合项目落地西南。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 校园风采 -->
+  <section id="campus" class="campus">
+    <div class="container">
+      <h2>银杏映书香 · 空港育英才</h2>
+      <div class="campus-gallery">
+        <div class="gallery-item"><div class="gallery-bg" style="background:#f0f8ff;"></div><p>图书馆·智慧学习空间</p></div>
+        <div class="gallery-item"><div class="gallery-bg" style="background:#e6f7f0;"></div><p>气象观测场·教学实训基地</p></div>
+        <div class="gallery-item"><div class="gallery-bg" style="background:#fff8e6;"></div><p>银杏大道·秋日成信大</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <svg width="32" height="32" viewBox="0 0 100 100" class="footer-icon">
+            <circle cx="50" cy="50" r="45" fill="#006699" opacity="0.05"/>
+            <path d="M30 40 L50 20 L70 40 M50 20 L50 70" stroke="#006699" stroke-width="4" fill="none"/>
+            <text x="50" y="90" font-size="10" text-anchor="middle" fill="#2E8B57">CUIT</text>
+          </svg>
+          <p>成都信息工程大学</p>
+        </div>
+        <div class="footer-contact">
+          <p>📍 四川省成都市西南航空港经济开发区学府路一段24号</p>
+          <p>📞 028-85966333 | 📧 webmaster@cuit.edu.cn</p>
+        </div>
+        <div class="footer-links">
+          <a href="#">学校主页</a>
+          <a href="#">信息公开</a>
+          <a href="#">人才招聘</a>
+          <a href="#">校友会</a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2024 成都信息工程大学 版权所有 | 校训：<strong>成于大气，信达天下</strong></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

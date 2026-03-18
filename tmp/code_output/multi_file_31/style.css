@@ -1,0 +1,471 @@
+/* ===== 全局重置与基础样式 ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --swjtu-blue: #003366;
+  --swjtu-dark: #2C3E50;
+  --swjtu-red: #C41E3A;
+  --swjtu-light: #F8F9FA;
+  --swjtu-gray: #6C757D;
+  --swjtu-bg: #FFFFFF;
+  --transition: all 0.3s ease;
+}
+body {
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: var(--swjtu-bg);
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--swjtu-blue);
+  margin-bottom: 2rem;
+  position: relative;
+}
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--swjtu-red);
+  margin: 0.5rem auto;
+  border-radius: 2px;
+}
+.section-desc {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--swjtu-gray);
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+}
+
+/* ===== 头部与导航 ===== */
+.site-header {
+  background: linear-gradient(135deg, var(--swjtu-blue), #002244);
+  color: white;
+  padding: 1.5rem 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.header-content {
+  display: flex;
+  justify-content: center;
+}
+.logo-section {
+  text-align: center;
+}
+.school-logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 0.8rem;
+}
+.school-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.school-slogan {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-top: 0.4rem;
+}
+.main-nav {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.nav-list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.nav-list li {
+  margin: 0 1rem;
+}
+.nav-list a {
+  display: block;
+  padding: 1rem 1.2rem;
+  color: var(--swjtu-blue);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+.nav-list a:hover,
+.nav-list a.active {
+  background: var(--swjtu-blue);
+  color: white;
+}
+
+/* ===== 首屏英雄区 ===== */
+.hero-section {
+  background: linear-gradient(rgba(0, 42, 80, 0.85), rgba(0, 42, 80, 0.9)), 
+              url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23003366"/><path d="M0,50 L100,50 M50,0 L50,100" stroke="%23C41E3A" stroke-width="1"/></svg>');
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 8rem 1rem 6rem;
+}
+.hero-title {
+  font-size: 3.2rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.3;
+}
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  opacity: 0.95;
+  margin-bottom: 2.5rem;
+}
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.stat-item {
+  text-align: center;
+}
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: white;
+  display: block;
+}
+@media (max-width: 768px) {
+  .hero-title { font-size: 2.4rem; }
+  .hero-subtitle { font-size: 1.2rem; }
+  .hero-stats { gap: 1rem; }
+  .stat-number { font-size: 2.5rem; }
+}
+.cta-button {
+  display: inline-block;
+  background: var(--swjtu-red);
+  color: white;
+  padding: 0.9rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(196, 30, 58, 0.4);
+}
+.cta-button:hover {
+  background: #a0182e;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(196, 30, 58, 0.6);
+}
+
+/* ===== 分栏内容区 ===== */
+.section-light {
+  background-color: var(--swjtu-light);
+  padding: 5rem 0;
+}
+.section-dark {
+  background: linear-gradient(to bottom, var(--swjtu-dark), #1a252f);
+  color: white;
+  padding: 5rem 0;
+}
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: var(--transition);
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+.card h3 {
+  color: var(--swjtu-blue);
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+.card p {
+  color: #555;
+}
+
+/* ===== 学科Tab切换 ===== */
+.discipline-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+.tab-btn {
+  padding: 0.7rem 1.8rem;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.tab-btn.active {
+  background: var(--swjtu-red);
+}
+.tab-content {
+  margin-top: 2rem;
+}
+.tab-pane {
+  display: none;
+  padding: 1.5rem;
+  background: rgba(255,255,255,0.08);
+  border-radius: 8px;
+}
+.tab-pane.active {
+  display: block;
+}
+.tab-pane h3 {
+  color: white;
+  margin-bottom: 1.2rem;
+}
+.tab-pane ul {
+  padding-left: 1.5rem;
+}
+.tab-pane li {
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+.building-preview {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
+/* ===== 招生政策卡片 ===== */
+.admission-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.8rem;
+  margin-top: 2rem;
+}
+.admission-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+.admission-card h3 {
+  color: var(--swjtu-blue);
+  margin-bottom: 1.2rem;
+  font-size: 1.3rem;
+}
+.admission-card ul {
+  padding-left: 1.8rem;
+}
+.admission-card li {
+  margin-bottom: 0.7rem;
+  line-height: 1.5;
+}
+
+/* ===== PDF模态框 ===== */
+.pdf-preview {
+  text-align: center;
+  margin-top: 3rem;
+}
+.pdf-btn {
+  background: var(--swjtu-blue);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.pdf-btn:hover {
+  background: #002244;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.85);
+}
+.modal.active {
+  display: block;
+}
+.modal-content {
+  background-color: white;
+  margin: 5% auto;
+  padding: 0;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 1000px;
+  max-height: 80vh;
+  overflow: hidden;
+  position: relative;
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+}
+.close:hover {
+  color: black;
+}
+
+/* ===== 校园生活网格 ===== */
+.campus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.campus-item {
+  background: rgba(255,255,255,0.08);
+  padding: 1.8rem;
+  border-radius: 8px;
+}
+.campus-item h3 {
+  color: white;
+  margin-bottom: 1rem;
+}
+.campus-item p {
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* ===== 报考指南步骤 ===== */
+.guide-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.8rem;
+  margin-top: 2rem;
+}
+.step {
+  background: white;
+  border-radius: 10px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  text-align: center;
+  transition: var(--transition);
+}
+.step:hover {
+  transform: translateY(-3px);
+}
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: var(--swjtu-red);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 50%;
+  margin: 0 auto 1.2rem;
+}
+.step h3 {
+  color: var(--swjtu-blue);
+  margin-bottom: 0.8rem;
+}
+.contact-box {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-top: 3rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+.contact-box h3 {
+  color: var(--swjtu-blue);
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+.contact-box p {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+.contact-box a {
+  color: var(--swjtu-blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+.contact-box a:hover {
+  text-decoration: underline;
+}
+
+/* ===== 页脚 ===== */
+.site-footer {
+  background: var(--swjtu-dark);
+  color: #bbb;
+  padding: 3rem 0 2rem;
+}
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+.footer-logo img {
+  margin-bottom: 1rem;
+}
+.footer-links a {
+  color: #bbb;
+  text-decoration: none;
+  margin: 0 0.8rem;
+}
+.footer-links a:hover {
+  color: white;
+}
+#currentYear {
+  font-weight: bold;
+  color: white;
+}
+
+/* ===== 响应式断点 ===== */
+@media (max-width: 992px) {
+  .hero-title { font-size: 2.6rem; }
+  .section-title { font-size: 2.2rem; }
+}
+@media (max-width: 768px) {
+  .hero-section { padding: 6rem 1rem 4rem; }
+  .hero-title { font-size: 2.2rem; }
+  .hero-subtitle { font-size: 1.3rem; }
+  .nav-list { flex-direction: column; }
+  .nav-list li { margin: 0.3rem 0; }
+  .section-title { font-size: 2rem; }
+}
+@media (max-width: 576px) {
+  .hero-title { font-size: 1.9rem; }
+  .section-title { font-size: 1.8rem; }
+  .stat-number { font-size: 2rem; }
+  .cta-button { padding: 0.7rem 2rem; font-size: 1rem; }
+}

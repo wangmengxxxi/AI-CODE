@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apex Legends | 传奇竞技场</title>
+  <meta name="description" content="《Apex英雄》官方风格简介站——快节奏战术竞技大逃杀，6v6团队协作，独特英雄技能与无缝复活机制。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 导航栏 -->
+  <header class="header" id="home">
+    <nav class="navbar">
+      <div class="nav-logo">APEX</div>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link active">首页</a></li>
+        <li><a href="#heroes" class="nav-link">传奇英雄</a></li>
+        <li><a href="#gameplay" class="nav-link">核心玩法</a></li>
+        <li><a href="#features" class="nav-link">独特特色</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="切换菜单">☰</button>
+    </nav>
+  </header>
+
+  <!-- 英雄轮播区 -->
+  <section class="hero-banner">
+    <div class="banner-content">
+      <h1>Apex Legends™</h1>
+      <p class="subtitle">战术竞技 · 团队至上 · 传奇永续</p>
+      <a href="#heroes" class="cta-button">探索传奇</a>
+    </div>
+  </section>
+
+  <!-- 传奇英雄介绍 -->
+  <section id="heroes" class="section heroes">
+    <div class="container">
+      <h2 class="section-title">传奇英雄</h2>
+      <p class="section-desc">每位传奇都拥有独一无二的被动、战术与终极技能，团队搭配决定战场走向。</p>
+
+      <div class="carousel" id="heroesCarousel">
+        <button class="carousel-btn prev" aria-label="上一位英雄">&lt;</button>
+        <div class="carousel-track">
+          <div class="carousel-item active">
+            <div class="hero-card">
+              <div class="hero-avatar" style="background: linear-gradient(135deg, #1a1a2e, #4a4a7d); --icon: '⚡';"></div>
+              <h3>直布罗陀</h3>
+              <p>坚不可摧的防御者，能量护盾与炮台守护队友。</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="hero-card">
+              <div class="hero-avatar" style="background: linear-gradient(135deg, #2d1b3e, #8a2be2); --icon: '👁️';"></div>
+              <h3>寻血犬</h3>
+              <p>追踪大师，揭露敌人踪迹，锁定关键目标。</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="hero-card">
+              <div class="hero-avatar" style="background: linear-gradient(135deg, #1a2c2c, #00bfa5); --icon: '🌀';"></div>
+              <h3>恶灵</h3>
+              <p>穿梭维度，传送队友，逆转战局于瞬息之间。</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-btn next" aria-label="下一位英雄">&gt;</button>
+      </div>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+  </section>
+
+  <!-- 核心玩法 -->
+  <section id="gameplay" class="section gameplay">
+    <div class="container">
+      <h2 class="section-title">核心玩法</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>跳伞部署</h3>
+          <p>从空投舱一跃而下，自由选择落点，抢占先机。</p>
+        </div>
+        <div class="card">
+          <h3>战术协作</h3>
+          <p>语音标记系统 + 无缝复活链 + 技能组合连携，团队即战力。</p>
+        </div>
+        <div class="card">
+          <h3>动态地图</h3>
+          <p>每局收缩圈随机变化，风暴边缘步步紧逼，节奏紧凑不拖沓。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 独特特色（可折叠） -->
+  <section id="features" class="section features">
+    <div class="container">
+      <h2 class="section-title">为什么玩家热爱 Apex？</h2>
+      <div class="accordion">
+        <details>
+          <summary>✅ 无外挂检测系统（Easy Anti-Cheat）</summary>
+          <p>EA 与 Respawn 深度集成反作弊，持续更新行为分析模型，保障公平竞技环境。</p>
+        </details>
+        <details>
+          <summary>✅ 免费游玩 · 跨平台联机</summary>
+          <p>PC / PlayStation / Xbox / Nintendo Switch 全平台数据互通，好友随时开黑。</p>
+        </details>
+        <details>
+          <summary>✅ 持续进化 · 季度更新</summary>
+          <p>每季新增传奇、武器、地图区域与平衡调整，两年内已发布超 20 位传奇。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Apex Legends™ 是 Respawn Entertainment 与 Electronic Arts Inc. 的商标。本页面为非官方简介展示，仅供学习交流使用。</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

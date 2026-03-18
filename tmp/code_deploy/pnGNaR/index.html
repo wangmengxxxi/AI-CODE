@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apex Legends | 传奇竞技场</title>
+  <meta name="description" content="《Apex Legends》是一款由Respawn Entertainment开发的免费大逃杀射击游戏，融合英雄技能、团队协作与快节奏战斗。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 导航栏 -->
+  <header class="header" id="home">
+    <nav class="navbar">
+      <a href="#home" class="logo">APEX</a>
+      <ul class="nav-links">
+        <li><a href="#gameplay">玩法</a></li>
+        <li><a href="#legends">传奇</a></li>
+        <li><a href="#features">特色</a></li>
+        <li><a href="#download">下载</a></li>
+      </ul>
+      <button class="hamburger" aria-label="菜单开关">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- 英雄轮播区 -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>传奇集结 · 绝境求生</h1>
+      <p class="subtitle">《Apex Legends》—— 免费游玩的战术竞技大逃杀</p>
+      <div class="cta-buttons">
+        <a href="#download" class="btn btn-primary">立即下载</a>
+        <a href="#legends" class="btn btn-outline">探索传奇</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 玩法介绍 -->
+  <section id="gameplay" class="section gameplay">
+    <div class="container">
+      <h2 class="section-title">快节奏 · 高协作 · 真战术</h2>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon">🎯</div>
+          <h3>精准射击</h3>
+          <p>基于《泰坦陨落》引擎打造的流畅枪械手感，真实后坐力与弹道模拟。</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🤝</div>
+          <h3>语音指挥</h3>
+          <p>集成智能语音标记系统（Ping System），无需说话即可传递战术信息。</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🛡️</div>
+          <h3>动态战场</h3>
+          <p>不断收缩的安全区、可破坏掩体、环境互动（滑铲、攀爬、滑索）带来极致机动性。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 传奇轮播 -->
+  <section id="legends" class="section legends">
+    <div class="container">
+      <h2 class="section-title">选择你的传奇</h2>
+      <p class="section-desc">每位传奇拥有独特技能、背景与战术定位 —— 团队缺一不可</p>
+
+      <div class="carousel">
+        <button class="carousel-btn prev" aria-label="上一位传奇">&lt;</button>
+        <div class="carousel-track">
+          <div class="carousel-item active" data-id="wattson">
+            <div class="legend-avatar" style="background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);">⚡</div>
+            <h3>沃特森</h3>
+            <p class="role">支援型</p>
+            <p class="bio">电网专家，用屏障守护队友，扭转战局于无形。</p>
+          </div>
+          <div class="carousel-item" data-id="bloodhound">
+            <div class="legend-avatar" style="background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);">👁️</div>
+            <h3>猎犬</h3>
+            <p class="role">侦察型</p>
+            <p class="bio">追踪者与预言家，洞察敌人行踪，预判战场变化。</p>
+          </div>
+          <div class="carousel-item" data-id="octane">
+            <div class="legend-avatar" style="background: linear-gradient(135deg, #00c9ff 0%, #92fe9d 100%);">⚡</div>
+            <h3>奥克塔恩</h3>
+            <p class="role">突击型</p>
+            <p class="bio">肾上腺素驱动的疾速战士，跳跃喷射改写移动边界。</p>
+          </div>
+        </div>
+        <button class="carousel-btn next" aria-label="下一位传奇">&gt;</button>
+      </div>
+
+      <div class="carousel-dots">
+        <button class="dot active" data-target="wattson" aria-label="切换至沃特森"></button>
+        <button class="dot" data-target="bloodhound" aria-label="切换至猎犬"></button>
+        <button class="dot" data-target="octane" aria-label="切换至奥克塔恩"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 核心特色（手风琴） -->
+  <section id="features" class="section features">
+    <div class="container">
+      <h2 class="section-title">为什么玩家热爱 Apex？</h2>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>✅ 免费游玩，零门槛</span>
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-panel">
+            <p>无付费获胜（Pay-to-Win）设计。所有传奇与外观均可通过游戏内货币或活动获取。</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>🔄 持续进化的内容</span>
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-panel">
+            <p>每赛季更新新传奇、地图区域、武器、平衡调整及叙事章节，保持新鲜感与深度。</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>🏆 全球电竞生态</span>
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-panel">
+            <p>Apex英雄全球系列赛（ALGS）覆盖五大洲，百万美元奖金池，职业战队与社区共创辉煌。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 下载CTA -->
+  <section id="download" class="section download">
+    <div class="container">
+      <div class="download-card">
+        <h2 class="section-title">即刻加入战场</h2>
+        <p class="section-desc">PC / PlayStation / Xbox / Nintendo Switch —— 全平台跨平台联机</p>
+        <div class="platform-logos">
+          <div class="platform" aria-label="PC平台">💻</div>
+          <div class="platform" aria-label="PlayStation平台">🎮</div>
+          <div class="platform" aria-label="Xbox平台">🟩</div>
+          <div class="platform" aria-label="Nintendo Switch平台">🔴</div>
+        </div>
+        <a href="https://www.ea.com/games/apex-legends" target="_blank" rel="noopener" class="btn btn-large">
+          官方网站下载 →
+        </a>
+        <p class="fine-print">©2024 Respawn Entertainment, LLC. Apex Legends 是 EA 的注册商标。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <p>传奇永不落幕 · 敬每一位 Apex 玩家</p>
+      <div class="social-links">
+        <a href="#" aria-label="Discord"><span>💬</span></a>
+        <a href="#" aria-label="Twitter"><span>🐦</span></a>
+        <a href="#" aria-label="YouTube"><span>▶️</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 脚本引用 -->
+  <script src="script.js" defer></script>
+</body>
+</html>
