@@ -1,12 +1,17 @@
-const courses = [
-  ['08:00', '数学', '英语', '物理', '化学', '生物'],
-  ['09:00', '英语', '数学', '语文', '英语', '数学'],
-  ['10:00', '语文', '物理', '英语', '数学', '语文'],
-  ['11:00', '体育', '化学', '生物', '语文', '体育']
+const COURSE_DATA = [
+  ["数学", "英语", "物理", "化学", "体育"],
+  ["语文", "数学", "英语", "生物", "美术"],
+  ["英语", "物理", "语文", "数学", "音乐"],
+  ["化学", "体育", "数学", "英语", "信息技术"],
+  ["班会", "语文", "化学", "物理", "英语"],
+  ["自习", "自习", "自习", "自习", "自习"]
 ];
+const PERIODS = ["08:00", "09:00", "10:00", "11:00", "14:00", "15:00"];
 
-document.getElementById('table-body').innerHTML = courses.map(row =>
-  `<tr><td><strong>${row[0]}</strong></td>` +
-  row.slice(1).map(cell => `<td>${cell}</td>`).join('') +
-  '</tr>'
-).join('');
+document.addEventListener("DOMContentLoaded", () => {
+  const tbody = document.querySelector("#schedule tbody");
+  if (!tbody) return;
+  tbody.innerHTML = PERIODS.map((t, i) => 
+    `<tr><th scope="row"><time datetime="${t}">${t}</time></th>${COURSE_DATA[i]?.map(c => `<td>${c || ""}</td>`).join("")}</tr>`
+  ).join("");
+});

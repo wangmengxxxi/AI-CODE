@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>缘遇 — 简约真诚的相亲平台</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>缘遇</h1>
+      <p>遇见真实，始于真诚</p>
+      <nav>
+        <button id="filterBtn" class="btn btn-primary">🔍 筛选条件</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="filter-panel" id="filterPanel">
+      <h2>筛选条件</h2>
+      <div class="filter-group">
+        <label>性别偏好：</label>
+        <select id="genderFilter">
+          <option value="all">不限</option>
+          <option value="female">寻找女生</option>
+          <option value="male">寻找男生</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>年龄范围：</label>
+        <input type="range" id="ageRange" min="22" max="45" value="35" />
+        <span id="ageValue">22–35岁</span>
+      </div>
+      <div class="filter-group">
+        <label>兴趣标签：</label>
+        <div class="tag-selector">
+          <button class="tag-btn" data-tag="旅行">旅行</button>
+          <button class="tag-btn" data-tag="阅读">阅读</button>
+          <button class="tag-btn" data-tag="烹饪">烹饪</button>
+          <button class="tag-btn" data-tag="运动">运动</button>
+          <button class="tag-btn" data-tag="音乐">音乐</button>
+        </div>
+      </div>
+      <button id="applyFilter" class="btn btn-secondary">✅ 应用筛选</button>
+      <button id="resetFilter" class="btn btn-outline">↺ 重置</button>
+    </section>
+
+    <section class="profiles-grid" id="profilesGrid">
+      <!-- profiles will be injected by JS -->
+    </section>
+
+    <div id="noResults" class="no-results hidden">
+      <h3>暂无匹配人选</h3>
+      <p>调整筛选条件，或稍后再来查看新成员</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2024 缘遇 · 专注真实社交 | 隐私保护 | 用户协议</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

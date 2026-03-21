@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>张明 | 前端开发者 & 设计爱好者</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <nav class="navbar">
+        <a href="#home" class="logo">ZM</a>
+        <ul class="nav-links">
+          <li><a href="#about">关于我</a></li>
+          <li><a href="#skills">技能</a></li>
+          <li><a href="#projects">作品</a></li>
+          <li><a href="#contact">联系我</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="切换菜单">☰</button>
+      </nav>
+
+      <div class="hero-content">
+        <h1>你好，我是<span class="highlight">张明</span></h1>
+        <h2>专注用户体验的前端开发者</h2>
+        <p>用代码构建优雅界面，以设计思维驱动技术实现。</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">查看作品</a>
+          <a href="#contact" class="btn btn-outline">联系我</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about" class="section">
+      <h2 class="section-title">关于我</h2>
+      <div class="about-content">
+        <img src="https://via.placeholder.com/400x500/f5f5f5/666?text=Profile" 
+             alt="张明头像" 
+             class="profile-img"
+             loading="lazy" />
+        <div class="about-text">
+          <p>我是一名拥有 5 年经验的前端开发者，毕业于浙江大学计算机科学与技术专业。热爱将复杂逻辑转化为直观易用的交互体验。</p>
+          <p>我相信技术的价值在于服务人——无论是优化加载性能提升用户留存，还是通过无障碍设计让信息触达更多群体。</p>
+          <p>业余时间热衷于 UI/UX 设计、开源贡献和徒步旅行。目前就职于杭州某科技公司，担任前端工程师。</p>
+          <div class="stats">
+            <div><span class="stat-number">50+</span><span class="stat-label">项目交付</span></div>
+            <div><span class="stat-number">12</span><span class="stat-label">开源贡献</span></div>
+            <div><span class="stat-number">3</span><span class="stat-label">技术博客</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <h2 class="section-title">核心技能</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>前端开发</h3>
+          <ul>
+            <li>HTML5 / CSS3 / JavaScript (ES2022+)</li>
+            <li>React · TypeScript · Vite</li>
+            <li>Responsive & Accessible UI</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>设计能力</h3>
+          <ul>
+            <li>Figma 原型与协作</li>
+            <li>UI 组件系统设计</li>
+            <li>动效原理与 CSS 动画</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>工程实践</h3>
+          <ul>
+            <li>Git 工作流 & CI/CD</li>
+            <li>Webpack / Vite 构建优化</li>
+            <li>单元测试（Jest + RTL）</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2 class="section-title">精选作品</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+          <div class="project-info">
+            <h3>智学通学习平台</h3>
+            <p>面向 K12 的自适应学习 Web 应用，支持实时答题反馈与学情可视化。</p>
+            <div class="project-tech">React · Ant Design · ECharts · WebSocket</div>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-image" style="background: linear-gradient(135deg, #a6c1ee 0%, #f6d365 100%);"></div>
+          <div class="project-info">
+            <h3>绿野记账 App</h3>
+            <p>PWA 离线优先记账工具，含数据同步、图表分析与预算提醒功能。</p>
+            <div class="project-tech">Vue3 · Pinia · IndexedDB · Chart.js</div>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-image" style="background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);"></div>
+          <div class="project-info">
+            <h3>无障碍阅读插件</h3>
+            <p>Chrome 扩展，为网页提供高对比度模式、字体放大、语义朗读等辅助功能。</p>
+            <div class="project-tech">Manifest V3 · TTS API · WCAG 2.1 合规</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2 class="section-title">联系我</h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <p>欢迎通过以下方式与我交流技术、合作或只是打个招呼 ✨</p>
+          <ul class="contact-list">
+            <li><strong>📧 邮箱：</strong><a href="mailto:zhangming@example.com">zhangming@example.com</a></li>
+            <li><strong>📱 微信：</strong>zhangming_dev</li>
+            <li><strong>🌐 GitHub：</strong><a href="https://github.com/zhangming-dev" target="_blank">github.com/zhangming-dev</a></li>
+            <li><strong>📍 城市：</strong>杭州 · 中国</li>
+          </ul>
+        </div>
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label for="name">姓名</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">邮箱</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">留言</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">发送消息</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 张明. 保留所有权利。使用原生 Web 技术构建。</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

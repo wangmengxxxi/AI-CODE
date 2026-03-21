@@ -1,0 +1,240 @@
+/* 全局重置与基础样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #ff9a9e;
+  --secondary: #fad0c4;
+  --accent: #a1c4fd;
+  --dark: #4a4a6a;
+  --light: #f9f9ff;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --radius: 12px;
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  line-height: 1.6;
+  color: var(--dark);
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e7f1 100%);
+  min-height: 100vh;
+}
+
+/* 头部英雄区 */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(120deg, var(--primary), var(--accent));
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  font-family: 'Dancing Script', cursive, 'Segoe UI';
+}
+
+.hero .subtitle {
+  font-size: 1.2rem;
+  opacity: 0.92;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* 容器 */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+/* 表单区域 */
+.add-section {
+  background: white;
+  border-radius: var(--radius);
+  padding: 1.8rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 2.5rem;
+}
+
+.add-section h2 {
+  color: var(--dark);
+  margin-bottom: 1.4rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--dark);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid #e0e0eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(161, 196, 253, 0.2);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: linear-gradient(120deg, var(--primary), #ff6b6b);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(255, 107, 107, 0.3);
+}
+
+/* 日记列表 */
+.diary-list h2 {
+  color: var(--dark);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.empty-text {
+  text-align: center;
+  color: #a0a0b3;
+  font-style: italic;
+  padding: 2rem;
+  font-size: 1.1rem;
+}
+
+/* 日记卡片 */
+.diary-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.4rem;
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--accent);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.diary-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.8rem;
+}
+
+.diary-date {
+  font-weight: 600;
+  color: #6a738d;
+  font-size: 0.95rem;
+}
+
+.diary-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 0;
+}
+
+.diary-content {
+  color: #5a5a7a;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.diary-actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.diary-btn {
+  background: none;
+  border: none;
+  color: #8a8ab3;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  transition: var(--transition);
+}
+
+.diary-btn:hover {
+  background: #f0f4ff;
+  color: var(--accent);
+}
+
+/* 页脚 */
+.footer {
+  text-align: center;
+  padding: 1.8rem 1rem;
+  color: #7a7a9c;
+  font-size: 0.9rem;
+  border-top: 1px solid #eee;
+  margin-top: 2rem;
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .container {
+    padding: 0 1rem 2rem;
+  }
+  .add-section,
+  .diary-card {
+    padding: 1.4rem;
+  }
+  .diary-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+}

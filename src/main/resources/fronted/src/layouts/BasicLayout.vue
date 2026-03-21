@@ -8,7 +8,8 @@ import {
   UserOutlined,
   SettingOutlined,
   LogoutOutlined,
-  LoginOutlined
+  LoginOutlined,
+  MessageOutlined
 } from '@ant-design/icons-vue'
 import { useAuthStore } from '@/stores/auth'
 
@@ -23,7 +24,8 @@ const menuItems = [
 // 管理员菜单
 const adminMenuItems = [
   { key: '/admin/users', label: '用户管理', icon: UserOutlined },
-  { key: '/admin/apps', label: '应用管理', icon: AppstoreOutlined }
+  { key: '/admin/apps', label: '应用管理', icon: AppstoreOutlined },
+  { key: '/admin/chatHistory', label: '对话管理', icon: MessageOutlined }
 ]
 
 // 初始化时获取登录用户

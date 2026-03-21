@@ -1,0 +1,13 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.6; padding: 1.5rem; background: #f8f9fa; color: #333; }
+header { text-align: center; margin-bottom: 2rem; }
+h1 { font-size: 2.2rem; margin-bottom: 0.5rem; color: #2c3e50; }
+#themeToggle { background: #3498db; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; }
+main { max-width: 600px; margin: 0 auto; }
+article { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+article h2 { color: #2980b9; margin-bottom: 0.5rem; }
+article p { margin-bottom: 0.75rem; color: #555; }
+article small { display: block; color: #7f8c8d; font-style: italic; }
+body.dark { background: #1a1a1a; color: #ecf0f1; }
+body.dark article { background: #2c3e50; }
+body.dark article h2, body.dark article p, body.dark article small { color: #ecf0f1; }

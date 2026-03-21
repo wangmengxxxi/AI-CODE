@@ -43,6 +43,12 @@ const routes: RouteRecordRaw[] = [
         name: 'adminApps',
         component: () => import('@/views/admin/Apps.vue'),
         meta: { title: '应用管理', requiresAuth: true, requiresAdmin: true }
+      },
+      {
+        path: 'admin/chatHistory',
+        name: 'adminChatHistory',
+        component: () => import('@/views/admin/ChatHistory.vue'),
+        meta: { title: '对话管理', requiresAuth: true, requiresAdmin: true }
       }
     ]
   },

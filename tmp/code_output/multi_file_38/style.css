@@ -1,0 +1,14 @@
+/* 新增：声明系统级配色偏好支持 */
+:root { color-scheme: light dark; }
+
+/* 新增：暗色模式媒体查询（纯 CSS，零 JS） */
+@media (prefers-color-scheme: dark) { 
+  body { color: #e2e2e2; background: #1a1a1a; } 
+}
+
+/* 优化：字体栈更现代、兼容性更好 */
+font-family: system-ui, -apple-system, sans-serif;
+
+/* 优化：行高从 1.6 → 1.7，段落间距更舒展 */
+line-height: 1.7;
+.content p { margin-bottom: 1.2rem; }

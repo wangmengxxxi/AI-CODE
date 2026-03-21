@@ -1,0 +1,72 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>林溪的博客 | 分享思考与代码</title>
+  <meta name="description" content="一位前端开发者的技术笔记与生活随笔">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light-theme">
+  <header class="site-header">
+    <div class="container">
+      <h1><a href="#home">林溪的博客</a></h1>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#home">首页</a></li>
+          <li><a href="#articles">文章</a></li>
+          <li><a href="#about">关于</a></li>
+          <li><button id="theme-toggle" aria-label="切换主题">🌙</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <section id="home" class="hero-section">
+      <div class="container">
+        <h2>记录成长，沉淀思考</h2>
+        <p>前端开发 | 技术写作 | 设计思维 | 日常随想</p>
+      </div>
+    </section>
+
+    <section id="articles" class="articles-section">
+      <div class="container">
+        <h2>近期文章</h2>
+        <div class="filter-bar">
+          <span>分类：</span>
+          <button class="filter-btn active" data-tag="all">全部</button>
+          <button class="filter-btn" data-tag="frontend">前端</button>
+          <button class="filter-btn" data-tag="life">生活</button>
+          <button class="filter-btn" data-tag="design">设计</button>
+        </div>
+        <div class="articles-grid" id="articles-grid">
+          <!-- 文章卡片将由 JS 动态插入 -->
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2>关于我</h2>
+        <p>我是林溪，一名热爱简洁与可用性的前端工程师。相信「好代码是写给人看的，顺便让机器执行」。业余喜欢摄影、徒步和整理知识体系。</p>
+        <div class="social-links">
+          <a href="#" aria-label="GitHub">🐱</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="Email">✉️</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="current-year"></span> 林溪. 保留所有权利。</p>
+      <p>使用 <strong>HTML/CSS/JavaScript</strong> 原生构建。</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

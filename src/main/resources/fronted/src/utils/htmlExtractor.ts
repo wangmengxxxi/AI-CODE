@@ -73,13 +73,16 @@ function injectCodeIntoHtml(htmlCode: string, cssCode: string, jsCode: string): 
 
 /**
  * 从 AI 回复中提取并合并代码
+ * 只提取明确标记为 html、css、js 的代码块
  * 支持以下格式：
  * 1. 分离的 ```html、```css、```js 代码块 -> 合并成完整 HTML
  * 2. 单个完整的 ```html 代码块
- * 3. 通用的 ``` 代码块（检测是否为 HTML）
+ * 注意：不会解析未标记语言类型的通用代码块
  */
 export function extractHtmlCode(content: string): string {
     if (!content) return ''
+
+    console.log('extractHtmlCode called, content length:', content.length)
 
     // 使用全局匹配提取所有代码块
     const codeBlockRegex = /```(\w*)\s*([\s\S]*?)```/g
@@ -93,44 +96,38 @@ export function extractHtmlCode(content: string): string {
         })
     }
 
+    console.log('Found code blocks:', blocks.length, blocks.map(b => ({ lang: b.lang, codeLen: b.code.length, codePreview: b.code.substring(0, 50) })))
+
     // 如果没有找到任何代码块，返回空
     if (blocks.length === 0) {
         return ''
     }
 
-    // 分类提取 html、css、js
+    // 分类提取 html、css、js - 只提取明确标记的代码块
     let htmlCode = ''
     let cssCode = ''
     let jsCode = ''
 
     for (const block of blocks) {
-        if (block.lang === 'html' || block.lang === '') {
-            // 检测内容类型
-            const trimmed = block.code.trim()
-            if (block.lang === 'html' ||
-                trimmed.startsWith('<!DOCTYPE') ||
-                trimmed.startsWith('<html') ||
-                trimmed.startsWith('<head') ||
-                trimmed.startsWith('<body') ||
-                trimmed.startsWith('<div') ||
-                trimmed.startsWith('<h1') ||
-                trimmed.startsWith('<section')) {
-                if (!htmlCode) {
-                    htmlCode = block.code
-                }
-            } else if (!block.lang && !htmlCode) {
-                // 通用代码块，尝试作为 HTML
-                htmlCode = block.code
-            }
+        console.log('Processing block:', block.lang, 'code length:', block.code.length)
+        // 只处理明确标记为 html、css、js 的代码块
+        if (block.lang === 'html') {
+            htmlCode = block.code
+            console.log('Found html block, length:', htmlCode.length)
         } else if (block.lang === 'css') {
             cssCode = block.code
         } else if (block.lang === 'js' || block.lang === 'javascript') {
             jsCode = block.code
         }
+        // 不再处理未标记语言类型的通用代码块
     }
 
-    // 如果有任何代码，构建完整 HTML
+    // 只有明确找到页面代码时才构建 HTML
     if (htmlCode || cssCode || jsCode) {
+        // 如果只有 css 或 js 没有 html，用空 HTML
+        if (!htmlCode) {
+            htmlCode = '<body></body>'
+        }
         // 检查 HTML 是否已经是完整文档
         if (htmlCode.includes('<html') || htmlCode.includes('<!DOCTYPE')) {
             return injectCodeIntoHtml(htmlCode, cssCode, jsCode)

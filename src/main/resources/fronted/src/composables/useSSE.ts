@@ -7,6 +7,18 @@ import { ref } from 'vue'
 export function useSSE() {
     const isLoading = ref(false)
     const error = ref<Error | null>(null)
+    let abortController: AbortController | null = null
+
+    /**
+     * 中断当前的 SSE 连接
+     */
+    function abort() {
+        if (abortController) {
+            abortController.abort()
+            abortController = null
+            isLoading.value = false
+        }
+    }
 
     /**
      * 连接 SSE 流式接口
@@ -25,6 +37,7 @@ export function useSSE() {
     ) {
         isLoading.value = true
         error.value = null
+        abortController = new AbortController()
 
         try {
             const response = await fetch(
@@ -32,6 +45,7 @@ export function useSSE() {
                 {
                     method: 'GET',
                     credentials: 'include', // 携带 Cookie
+                    signal: abortController.signal,
                     headers: {
                         'Accept': 'text/event-stream'
                     }
@@ -97,6 +111,12 @@ export function useSSE() {
             onComplete?.()
 
         } catch (err) {
+            // 如果是主动中断，不算错误
+            if (err instanceof Error && err.name === 'AbortError') {
+                isLoading.value = false
+                onComplete?.()
+                return
+            }
             const errorInstance = err instanceof Error ? err : new Error(String(err))
             error.value = errorInstance
             isLoading.value = false
@@ -107,6 +127,7 @@ export function useSSE() {
     return {
         isLoading,
         error,
-        connect
+        connect,
+        abort
     }
 }

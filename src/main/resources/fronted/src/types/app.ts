@@ -66,3 +66,26 @@ export interface ChatMessage {
     content: string
     timestamp?: number
 }
+
+/** 对话历史记录 */
+export interface ChatHistory {
+    id: number
+    message: string
+    messageType: 'user' | 'ai'
+    appId: number
+    userId: number
+    createTime: string
+    updateTime?: string
+    isDelete?: number
+}
+
+/** 对话历史查询请求 */
+export interface ChatHistoryQueryRequest {
+    appId?: number
+    message?: string
+    messageType?: string
+    userId?: number
+    lastCreateTime?: string
+    sortField?: string
+    sortOrder?: 'descend' | 'ascend'
+}

@@ -103,20 +103,29 @@ const renderedHtml = computed(() => {
   :deep(pre) {
     margin: 12px 0;
     padding: 0;
-    background: #2d2d2d;
     border-radius: 6px;
     overflow-x: auto;
 
+    // 让 highlight.js 的样式生效
     code {
       display: block;
       padding: 16px;
       margin: 0;
-      background: transparent;
-      border: none;
-      color: #ccc;
       font-size: 13px;
       line-height: 1.6;
     }
+  }
+
+  // highlight.js 代码块样式
+  :deep(pre.hljs) {
+    background: #f6f8fa;
+  }
+
+  :deep(code.hljs) {
+    padding: 0;
+    background: transparent;
+    border: none;
+    color: inherit;
   }
 
   :deep(a) {
